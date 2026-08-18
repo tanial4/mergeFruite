@@ -1,0 +1,12 @@
+/Library/
+/Temp/
+/Builds/
+/Build/
+/Obj/
+/obj/
+*.csproj
+*.sln
+*.unityproj
+*.log
+.DS_Store
+Thumbs.db
