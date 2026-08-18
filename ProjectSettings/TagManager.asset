@@ -10,6 +10,7 @@ TagManager:
   - floor
   - cloud
   - cherry
+  - lemon
   layers:
   - Default
   - TransparentFX
