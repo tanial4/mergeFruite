@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 936784019542325864}
   - component: {fileID: 5151956380489417743}
   - component: {fileID: 3021335122377857382}
-  - component: {fileID: 42050633997048245}
   - component: {fileID: -8891387643179994447}
+  - component: {fileID: -2342470100661336235}
   m_Layer: 0
   m_Name: cherry
   m_TagString: cherry
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4420521780219192677}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.1129, y: -1.7227, z: 0}
+  m_LocalPosition: {x: -5.1129, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -90375647409325229, guid: 36c48ccd5965bb9448108c72f410379a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -122,7 +122,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &42050633997048245
+--- !u!114 &-8891387643179994447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4420521780219192677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2569356017eebd74dac5b486be1abaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::merge
+  nuevaFruta: {fileID: 7033295369517064069, guid: da3c8d4625860b14aa8c6f5bc65b189b, type: 3}
+--- !u!58 &-2342470100661336235
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,18 +169,5 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 2.56
---- !u!114 &-8891387643179994447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4420521780219192677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2569356017eebd74dac5b486be1abaf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::merge
-  nuevaFruta: {fileID: 7033295369517064069, guid: da3c8d4625860b14aa8c6f5bc65b189b, type: 3}
+  m_Offset: {x: -0.51745474, y: -1.3108909}
+  m_Radius: 3.1417375

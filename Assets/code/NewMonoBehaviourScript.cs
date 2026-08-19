@@ -1,21 +1,21 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
-
 
 public class Nube : MonoBehaviour
 {
-
-
-    public GameObject [] frutas;
+    public GameObject[] frutas;
     public static int contador = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
+    private int proximaFrutaIndex;
+    private MostrarProximaFruta nextFruitDisplay;
+
     void Start()
     {
-        
+        nextFruitDisplay = GameObject.Find("next_fruit").GetComponent<MostrarProximaFruta>();
+        proximaFrutaIndex = Random.Range(0, frutas.Length);
+        ActualizarProximaFruta();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Keyboard.current == null) return;
@@ -32,15 +32,22 @@ public class Nube : MonoBehaviour
         }
         else if (Keyboard.current.upArrowKey.wasPressedThisFrame)
         {   
-            int numero = Random.Range(0, frutas.Length);
-            GameObject nuevo = Instantiate(frutas[numero],
-            new Vector3(gameObject.transform.position.x, 
-            gameObject.transform.position.y, 
-            gameObject.transform.position.z), 
-            gameObject.transform.rotation);
+            GameObject nuevo = Instantiate(frutas[proximaFrutaIndex],
+                new Vector3(gameObject.transform.position.x, 
+                gameObject.transform.position.y, 
+                gameObject.transform.position.z), 
+                gameObject.transform.rotation);
+            
             nuevo.name = contador + "";
             contador++;
             
+            proximaFrutaIndex = Random.Range(0, frutas.Length);
+            ActualizarProximaFruta();
         }
+    }
+
+    void ActualizarProximaFruta()
+    {
+        nextFruitDisplay.MostrarFruta(frutas[proximaFrutaIndex]);
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - cloud
   - cherry
   - lemon
+  - melon
+  - next_fruit
   layers:
   - Default
   - TransparentFX
