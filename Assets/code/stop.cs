@@ -17,6 +17,6 @@ public class Reset : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(2);
     }
 }
